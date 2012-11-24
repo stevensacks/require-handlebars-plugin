@@ -1,0 +1,10 @@
+Thumbs.db
+.DS_Store
+
+.settings/*
+.settings
+.idea/*
+.idea
+
+bin
+bin/*
