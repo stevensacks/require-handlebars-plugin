@@ -29,7 +29,7 @@ define([
         templateExtension = "hbs",
         customNameExtension = "@hbs",
         devStyleDirectory = "../css/",
-        buildStyleDirectory = "../../www/css/",
+        buildStyleDirectory = "/../../../../../www/css/",
         helperDirectory = "template/helpers/",
         i18nDirectory = "template/i18n/",
         buildCSSFileName = "template.css";
@@ -347,6 +347,7 @@ define([
                           });
                         }
                         else if ( config.isBuild ) {
+						    console.log(__dirname + buildStyleDirectory + buildCSSFileName);
                           (function(){
                             var fs  = require.nodeRequire('fs'),
                                 str = _(metaObj.styles).map(function (style) {
