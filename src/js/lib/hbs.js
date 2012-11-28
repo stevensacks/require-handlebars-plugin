@@ -30,6 +30,7 @@ define([
         customNameExtension = "@hbs",
         devStyleDirectory = "../css/",
         buildStyleDirectory = "/../../../../../www/css/",
+		hardCodedPath = "E:/Project/requirejs/www/css/template.css",
         helperDirectory = "template/helpers/",
         i18nDirectory = "template/i18n/",
         buildCSSFileName = "template.css";
@@ -347,7 +348,6 @@ define([
                           });
                         }
                         else if ( config.isBuild ) {
-						    console.log(__dirname + buildStyleDirectory + buildCSSFileName);
                           (function(){
                             var fs  = require.nodeRequire('fs'),
                                 str = _(metaObj.styles).map(function (style) {
@@ -360,7 +360,11 @@ define([
 
                             // I write out my import statements to a file in order to help me build stuff.
                             // Then I use a tool to inline my import statements afterwards. (you can run r.js on it too)
-                            fs.open(__dirname + buildStyleDirectory + buildCSSFileName, filecode, '0666', function( e, id ) {
+							console.log(hardCodedPath);
+                            fs.exists(hardCodedPath, function(exists) {console.log('exists? ' + exists);})
+                            fs.open(hardCodedPath, filecode, '0666', function( e, id ) {
+                                console.log('fs.open called');
+                                console.log(e);
                               fs.writeSync(id, str, null, encoding='utf8');
                               fs.close(id);
                             });
