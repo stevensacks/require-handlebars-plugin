@@ -29,10 +29,10 @@ define([
         templateExtension = "hbs",
         customNameExtension = "@hbs",
         devStyleDirectory = "../css/",
-        buildStyleDirectory = "../../bin/css/",
+        buildStyleDirectory = "../../www/css/",
         helperDirectory = "template/helpers/",
         i18nDirectory = "template/i18n/",
-        buildCSSFileName = "build.css";
+        buildCSSFileName = "template.css";
 
     if (typeof window !== "undefined" && window.navigator && window.document && !window.navigator.userAgent.match(/Node.js/)) {
         // Browser action

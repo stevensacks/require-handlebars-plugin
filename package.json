@@ -1,0 +1,10 @@
+{
+  "name": "requirejs-multipage",
+  "author": "Steven Sacks",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt-contrib-mincss":       "0.3.x",
+    "grunt-contrib-requirejs":    "0.3.x",
+    "grunt-contrib-clean":        "0.3.x"
+  }
+}

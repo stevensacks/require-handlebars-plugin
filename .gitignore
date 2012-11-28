@@ -6,5 +6,8 @@ Thumbs.db
 .idea/*
 .idea
 
-bin
-bin/*
+www
+www/*
+
+node_modules
+node_modules/*
