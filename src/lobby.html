@@ -3,16 +3,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Lobby</title>
+    <link rel="stylesheet" href="css/template.css" type="text/css"/>
     <script src="./js/lib/require.js"></script>
     <script>
-        require(['./js/common'], function (common) {
-          require(['app/lobby']);
+        require(['./js/core'], function (core) {
+          require(['lobby']);
         });
     </script>
 </head>
 <body>
 <h1>Lobby</h1>
 <a href="room.html">Go To Room</a>
-<div id="container"></div>
 </body>
 </html>

@@ -1,11 +1,13 @@
-define(['Class'], function()
-{
-    var TestView = Class.extend(
+(function(){
+    define(['Class'], function()
     {
-        init: function()
+        var TestView = Class.extend(
         {
+            init: function()
+            {
 
-        }
+            }
+        });
+        return TestView;
     });
-    return TestView;
-});
+})();

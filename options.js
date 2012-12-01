@@ -1,14 +1,16 @@
 module.exports = {
   appDir: 'src',
   baseUrl: 'js/',
-  mainConfigFile: 'src/js/common.js',
+  mainConfigFile: 'src/js/core.js',
   dir: 'www',
+  keepBuildDir: true,
   modules: [
     {
-      name: 'common',
+      name: 'core',
       include: [
           'jquery',
           'underscore',
+          'backbone',
           'handlebars',
           'hbs',
           'i18nprecompile',
@@ -17,12 +19,12 @@ module.exports = {
       ]
     },
     {
-        name: 'app/room',
-        exclude: ['common']
+        name: 'room',
+        exclude: ['core']
     },
     {
-        name: 'app/lobby',
-        exclude: ['common']
+        name: 'lobby',
+        exclude: ['core']
     }
   ]
 };

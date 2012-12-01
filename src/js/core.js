@@ -7,10 +7,14 @@ requirejs.config({
         },
         'underscore': {
             exports: '_'
+        },
+        'backbone': {
+            exports: 'Backbone'
         }
     },
     paths: {
         jquery: 'lib/jquery.1.8.3',
+        backbone: 'lib/Backbone',
         underscore: 'lib/underscore',
         handlebars: 'lib/Handlebars',
         hbs: 'lib/hbs',
